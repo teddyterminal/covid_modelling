@@ -68,7 +68,7 @@ if __name__ == "__main__":
 
 	visited = set()
 
-	for ddd in des: 
+	for ddd in des[-2:]: 
 	    for i, county in enumerate(m.counties_info): 
 	        if county["GEOID"] not in visited: 
 	            for idx in ddd[1]: 
@@ -85,7 +85,7 @@ if __name__ == "__main__":
 	    fig.set_size_inches(15, 10)
 	    plt.savefig("cases/" + str(ddd[0]) + ".jpg", bbox_inches = "tight")
 
-	for ddd in vvs: 
+	for ddd in vvs[-2:]: 
 	    for i, county in enumerate(m.counties_info): 
 	        if county["GEOID"] not in visited: 
 	            for idx in ddd[1]: 
